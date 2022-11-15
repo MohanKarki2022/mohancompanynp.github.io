@@ -1,0 +1,843 @@
+<!DPCTYPE html>
+<html>
+  
+    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+          <meta charst="utf-8">
+	<style>
+	
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+button{
+  cursor: pointer;
+}
+
+#services{
+    visibility: hidden;
+}
+#globe{
+  visibility: hidden;
+}
+#port{
+  visibility: hidden;
+}
+#box{
+  visibility: hidden;
+}
+#form{
+  visibility: hidden;  
+}
+.animate{
+    animation-name: css;
+    animation-duration: 1s;
+}
+
+@keyframes css{
+  
+  from{
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  
+  to{
+     transform: translateY(0%);
+     opacity: 1;
+  }
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4511e;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.nav a{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 16px;
+}
+
+.nav .right a.active{
+  background: #fff;
+  color: #f4511e;
+}
+
+.nav .left{
+  padding-left: 10%;
+}
+.nav .right{
+  padding-right: 8%;
+}
+.nav .left a{
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.nav .right a{
+  font-size: 14px;
+  display: inline-block;
+  height: 100%;
+  letter-spacing: 3px;
+  font-size: 13px;
+  padding-top: 19px;
+
+}
+.nav .right a:hover{
+  background-color: white;
+  color: #f4511e;
+}
+
+.jumbotorn{
+  height: 400px;
+  background:  #f4511e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jumbotorn h1{
+  font-size: 50px;
+  text-align: center;
+}
+
+.jumbotorn p{
+  font-size: 20px;
+  text-align: center;
+}
+
+.jumbotorn .form input{
+  border: none;
+  padding: 8px;
+  outline: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 400px;
+}
+.jumbotorn .form button{
+  border: 1px solid #d43f3a;
+  outline: none;
+  padding: 8px;
+  background: #d9534f;
+  color: white;
+}
+.jumbotorn .form{
+  display: flex;
+}
+
+
+.about{
+  margin-top: 40px;
+  padding: 50px;
+  display: flex;
+  z-index: 1;
+}
+
+.about .left{
+  flex: 3;
+
+}
+.about .right{
+  flex: 1;
+}
+.about p:nth-of-type(1){
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+
+}
+.about p:nth-of-type(2){
+  margin-top: 50px;
+  color: #818181;
+  font-size: 15px;
+ font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}
+
+.about .right i{
+  font-size: 150px;
+  color:  #f4511e;
+  padding: 50px;
+}
+.about h2{
+  font-family: 'Lato', sans-serif;
+  color: #303030;
+}
+.about .left button{
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+ font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  background: inherit;
+  margin-top: 50px;
+}
+.about .left button:hover{
+  color: #333;
+  background: #e6e6e6;
+  border: 1px solid #adadad;
+}
+.values .left i{
+  font-size: 200px;
+  color: #f4511e;
+}
+.values{
+  display: flex;
+  justify-content: space-around;
+  background: #f6f6f6;
+  padding: 50px;
+  z-index: 1;
+}
+.values p:nth-of-type(1){
+  font-size: 20px;
+  pading: 20px;
+}
+.values p:nth-of-type(2){
+  color: #818181;
+  line-height: 1.6;
+}
+.values .left{
+  flex: 1;
+  padding: 40px;
+
+}
+.values .right{
+  flex: 3;
+  padding-top: 50px;
+  padding: 30px;
+}
+.values h1{
+  font-size: 30px;
+  color: #303030;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.row{
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
+}
+.col{
+  padding: 20px;
+  flex: 1;
+}
+
+.row i{
+  font-size: 40px;
+  color: #f4511e;
+}
+
+.services p:nth-of-type(1){
+  font-size: 20px;
+}
+
+.services p:nth-of-type(2){
+  color:#818181;
+  font-size: 15px;
+}
+.services p{
+  padding: 14px;
+}
+.services{
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 60px;
+  z-index: 1;
+}
+.services h2{
+  color: #303030;
+  font-weight: bold;
+}
+
+.portfolio h2{
+  color: #303030;
+  font-weight: bold;
+}
+.portfolio .photos{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+
+}
+.portfolio h2{
+  text-align: center;
+  padding-top: 70px;
+}
+.portfolio p{
+   text-align: center;
+}
+
+.portfolio{
+  background: #f6f6f6;
+  padding-bottom: 20px;
+  z-index: 1;
+}
+.photo p:nth-of-type(1){
+  font-weight: bold;
+  color: #818181;
+  padding: 8px;
+}
+p.topic{
+  padding-top: 50px;
+}
+
+.plans{
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  font-family: 'Lato', sans-serif;
+  z-index: 1;
+ 
+}
+
+.plan{
+  border: 1px solid #f4511e;
+  width: 400px;
+  z-index: 1;
+}
+.plan .name{
+  background: #f4511e;
+  font-size: 30px;
+  padding: 30px;
+  color: white;
+}
+
+.plan .price{
+  border-top: 1px solid #ccc;
+  padding: 30px;
+}
+.price p:nth-of-type(1){
+    font-size: 40px;
+    color: #818181;
+   font-family: 'Lato', sans-serif;
+
+}
+
+.price p:nth-of-type(2){
+  color: #818181;
+  margin: 10px;
+  font-size: 13px;
+}
+
+.price button{
+  border: 1px solid #f4511e;
+  padding: 10px 16px;
+  font-size: 19px;
+  background: #f4511e;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+}
+
+.price button:hover{
+  background: #fff;
+  color: #f4511e;
+}
+.tables{
+  margin: 20px;
+  z-index: 1;
+}
+.tables h2{
+  text-align: center;
+  color: #303030;
+  font-weight: bold;
+  padding-top: 70px;
+}
+.tables p:nth-of-type(1){
+   text-align: center;
+   margin-top: 20px;
+}
+
+.contactform{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1;
+}
+.contactform .form input{
+  width: 45%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.contactform .form{
+  flex: 6;
+}
+
+.contactform .address{
+  flex: 4;
+  margin-left: 50px;
+
+}
+.address p{
+     font-family: 'Lato', sans-serif;
+     color: #818181;
+     margin: 10px;
+}
+
+.contactform textarea{
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  width: 92.5%;
+  resize: none;
+}
+.btn button{
+  float: right;
+  margin-right: 56px;
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact{
+  background: #f6f6f6;
+  padding-bottom: 20px;
+}
+.contact h2{
+  text-align: center;
+  color: #303030;
+  font-weight: bold;
+  padding-top: 70px;
+}
+
+.map{
+  height: 750px;
+  background-image: url('https://www.w3schools.com/w3images/map.jpg');
+}
+
+.footer{
+  padding: 80px;
+  text-align: center;
+}
+.footer a i{
+  font-size: 40px;
+  font-weight: bold;
+  color: #f4511e;
+}
+.footer p a{
+  text-decoration: none;
+  color: #337AB7;
+  font-size: 14px;
+}
+.footer p{
+    font-family: 'Lato', sans-serif;
+    color: #818181;
+}
+.footer p a:hover{
+  text-decoration: underline;
+}
+
+</style>
+    </head>
+  
+    <body>
+   
+        <div class="nav">
+          
+            <div class="left">
+              <a href="#"> Logo </a>
+            </div>
+          
+           <div class="right" id="rightlinks">
+             <a href="#about" id="about"> ABOUT </a>
+             <a href="#services" id="service"> SERVICES </a>
+             <a href="#portfolio" id="portfolio"> PORTFOLIO </a>
+             <a href="#price" id="price"> PRICING </a>
+             <a href="#contact" id="contact"> CONTACT </a>
+          </div>
+          
+        </div>
+      
+      
+      
+      <div class="jumbotorn" id="jumbo">
+        
+        <div class="subscribe">
+            <h1> Company </h1> <br>
+            <p> We specialize in blablabla </p><br>
+          
+          <div class="form">
+            <input type="text" placeholder="Email Address"> <button> Subscribe </button>
+         </div>
+          
+        </div>
+        
+        
+       </div>
+      
+      
+       <div class="about" id="about">
+        
+        
+          <div class="left">
+            
+              <h2> ABOUT COMPANY PAGE </h2>
+            
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+ </p><br><br>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+ </p>
+            
+      <button> Get in Touch </button>
+     </div>
+        
+        
+            <div class="right">
+              
+              <i class="fa fa-signal"></i>
+              
+             </div>
+       </div>
+      
+      
+      
+      <div class="values">
+
+        <div class="left" id="globe">
+          <i class="fa fa-globe"></i>
+         </div>
+        
+         <div class="right">
+                  <h1> OUR VALUES</h1><br><br>
+           
+            <p> <strong>MISSION </strong>: Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+           
+       
+             <p> <strong> VISION</strong>: Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+ </p>
+         </div>
+        
+      </div>
+      
+      
+      <div class="services" id="services">
+        <h2> SERVICES </h2>
+        <p> What we offer </p>
+          <div class="row">
+            
+              <div class="col">
+                <i class="fa fa-power-off"></i>
+                  <p> POWER</p>
+                  <p> Lorem ipsum dolor sit amet..</p>
+                
+               </div>
+            
+              <div class="col">
+                <i class="fa fa-heart"></i>
+                <p> LOVE </p>
+                <p> Lorem ipsum dolor sit amet.. </p>
+               </div> 
+            
+              <div class="col">
+                
+               <i class="fa fa-suitcase"></i>
+                <p> JOB DONE </p>
+               <p> Lorem ipsum dolor sit amet..</p>
+               </div>           
+            
+            
+          </div>
+        
+           <div class="row">
+            
+              <div class="col">
+                
+               <i class="fa fa-leaf"></i>
+                <p> GREEN </p>
+               <p> Lorem ipsum dolor sit amet..</p>
+                                  
+               </div>
+            
+              <div class="col">
+                
+               <i class="fa fa-certificate "></i>
+                <p> CERTIFIED </p>
+               <p> Lorem ipsum dolor sit amet..</p>
+                
+               </div> 
+            
+              <div class="col">
+             
+                <i class="fa fa-wrench"> </i>
+                <p> HARD WORK </p>
+                 <p>Lorem ipsum dolor sit amet..  </p>
+              </div>           
+            
+            
+          </div>
+        
+      </div>
+        
+      
+     <div class="portfolio" id="port">
+       
+        <h2> PORTFOLIO </h2>
+        <p class="topic">What we have created  </p>
+       
+       <div class="photos">
+         
+         <div class="photo">
+           
+           <img src="https://www.w3schools.com/bootstrap/paris.jpg">
+           <p> Paris </p>
+           <p> Yes, we built Paris </p>
+           
+         </div>
+         
+         
+          <div class="photo">
+            
+           <img src="https://www.w3schools.com/bootstrap/newyork.jpg">
+           <p>New York </p>
+           <p> We built New York </p>
+            
+         </div>
+         
+         
+
+      <div class="photo">
+        
+           <img src="https://www.w3schools.com/bootstrap/sanfran.jpg">
+           <p> San Francisco </p>
+           <p> Yes, San Fran is ours </p>
+        
+       </div>
+         
+      </div>
+    </div>
+      
+      
+      
+      
+
+      
+      <div class="tables" id="box">
+           <h2> PRICING </h2>
+       <p> Choose a payment plan that works for you </p>
+     <div class="plans">
+       
+
+       <div class="plan">
+          <div class="name">
+           Pro
+          </div>
+         
+         <div class="detials"><br>
+           <p> 20 Lorem </p><br>
+           <p> 15 Ipsum </p><br>
+           <p> 5 Dolor </p><br>
+           <p> 2 Sit </p><br>
+           <p> Endless Amet </p><br>
+         </div>
+         
+         <div class="price">
+           <p> $19 </p>
+           <p> per month </p>
+           <button> Sign Up</button>
+         </div>
+         
+       </div>
+       
+       <div class="plan">
+         
+          <div class="name">
+            Basic
+          </div>
+         
+         <div class="detials"><br>
+           <p> 20 Lorem </p><br>
+           <p> 15 Ipsum </p><br>
+           <p> 5 Dolor </p><br>
+           <p> 2 Sit </p><br>
+           <p> Endless Amet </p><br>
+         </div>
+         
+         <div class="price">
+           <p> $29 </p>
+           <p> per month </p>
+           <button> Sign Up</button>
+         </div> 
+         
+       </div>
+       
+       <div class="plan">
+         
+          <div class="name">
+           Premium
+          </div>
+         
+         <div class="detials"><br>
+           <p> 20 Lorem </p><br>
+           <p> 15 Ipsum </p><br>
+           <p> 5 Dolor </p><br>
+           <p> 2 Sit </p><br>
+           <p> Endless Amet </p><br>
+         </div>
+         
+         <div class="price">
+           <p> $49 </p>
+           <p> per month </p>
+            <button> Sign Up</button>
+         </div>
+         
+       </div>
+       
+       </div>
+    </div>
+     
+      
+    <div class="contact" id="form">
+      
+        <h2> CONTACT </h2><br>
+        
+        <div class="contactform">
+          
+            <div class="address">
+              <p> Contact us and we'll get back to you within 24 hours. </p>
+              <p> <i class="fa fa-map-marker"> </i> Chicago, US </p>
+              <p> <i class="fa fa-mobile-phone"> </i>  +00 1515151515 </p>
+              <p> <i class="fa fa-envelope-o"> </i>  myemail@something.com</p>
+            </div>
+          
+            <div class="form">
+              
+
+              <input type="text" placeholder="Name">&nbsp &nbsp 
+              <input type="email" placeholder="Email"> 
+              <br>
+             <textarea rows="5" cols="100"> </textarea><br>
+              
+              <div class="btn">
+                 <button> Send </button>
+               </div>
+            </div>  
+          
+
+        </div>
+      
+    </div>
+      
+      
+      <div class="map">
+        
+        
+       </div>
+      
+      
+      <div class="footer">
+        
+          <a href="#jumbo"> <i class="fa fa-angle-up" aria-hidden="true"></i> </a>
+          <p> Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com </a></p>
+        
+       </div>
+
+	<script>
+	let serviceposition = document.getElementById("services").offsetTop;
+  let globeposition = document.getElementById("globe").offsetTop;
+  let portposition = document.getElementById("port").offsetTop;
+  let boxposition = document.getElementById("box").offsetTop;  
+  let formposition = document.getElementById("form").offsetTop;
+  let aboutposition = document.querySelector("#about").offsetTop;
+ 
+document.addEventListener("scroll", function(){
+  
+  let scrollposition = window.pageYOffset;
+
+  
+  if(scrollposition + 400 > serviceposition){
+    
+    document.getElementById("services").style.visibility = "visible";
+    document.getElementById("services").classList.add("animate");
+    
+  }
+  
+  if(scrollposition + 400 > globeposition){
+    document.getElementById("globe").style.visibility = "visible";
+    document.getElementById("globe").classList.add("animate");
+  }
+  
+  
+  if(scrollposition + 200 > portposition){
+    document.getElementById("port").style.visibility = "visible";
+    document.getElementById("port").classList.add("animate");
+  }
+
+  
+  if(scrollposition + 300 > boxposition){
+    document.getElementById("box").style.visibility = "visible";
+    document.getElementById("box").classList.add("animate");
+  }
+
+  if(scrollposition + 400 > formposition){
+    document.getElementById("form").style.visibility = "visible";
+    document.getElementById("form").classList.add("animate");
+  }
+  
+  
+  
+  //auto change background color of links
+  
+
+  
+   //let links = document.querySelectorAll(".nav .right a");
+  
+  if(scrollposition + 200 > formposition){
+      
+    document.querySelector("#contact").classList.add("active");
+      
+  }
+  
+ 
+    if(scrollposition + 200 > boxposition){
+      document.querySelector("#price").classList.add("active");
+  }
+  
+  
+ 
+     if(scrollposition + 400 > portposition){
+  
+      document.querySelector("#portfolio").classList.add("active");
+    }
+  
+
+     if(scrollposition + 200 > serviceposition){
+
+
+      document.querySelector("#service").classList.add("active");
+    }
+  
+  
+
+     if(scrollposition > aboutposition -100){
+       
+       
+      document.querySelector("#about").classList.add("active");
+    }
+  
+  
+});
+
+
+
+	</script>
+      
+    </body>
+</html>
